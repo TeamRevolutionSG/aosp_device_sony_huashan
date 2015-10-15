@@ -13,12 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# This file includes all definitions that apply to ALL hammerhead devices, and
-# are also specific to hammerhead devices
-#
 
 LOCAL_KERNEL := device/sony/huashan/kernel
-common_includes += kernel/sony/msm8x60/include
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel
