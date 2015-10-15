@@ -17,7 +17,7 @@
 # are also specific to hammerhead devices
 #
 
-# Will care about kernel later on
+# Will care about kernel later onq
 #LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 
 #PRODUCT_COPY_FILES := \
@@ -148,11 +148,11 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # Media
-PRODUCT_PACKAGES += \
-    qcmediaplayer
+#PRODUCT_PACKAGES += \
+#    qcmediaplayer
 
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+#PRODUCT_BOOT_JARS += \
+#    qcmediaplayer
 
 # Omx
 PRODUCT_PACKAGES += \
