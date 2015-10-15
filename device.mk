@@ -17,11 +17,11 @@
 # are also specific to hammerhead devices
 #
 
-# Will care about kernel later onq
-#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+LOCAL_KERNEL := device/sony/huashan/kernel
+common_includes += kernel/sony/msm8x60/include
 
-#PRODUCT_COPY_FILES := \
-#    $(LOCAL_KERNEL):kernel
+PRODUCT_COPY_FILES := \
+    $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/huashan/overlay
