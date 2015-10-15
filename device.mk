@@ -16,13 +16,14 @@
 # This file includes all definitions that apply to ALL hammerhead devices, and
 # are also specific to hammerhead devices
 #
-# Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/huashan/overlay
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel
+
+DEVICE_PACKAGE_OVERLAYS += \
+    device/sony/huashan/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
