@@ -14,10 +14,9 @@
 # limitations under the License.
 # 
 
-# Inherit from Sony common
-include device/sony/common/BoardConfigCommon.mk
-
-TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
+# Board
+BOARD_VENDOR := sony
+BOARD_RECOVERY_SWIPE := true
 
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
@@ -26,6 +25,10 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_SEPARATE_RECOVERY := true
+
+# Kernel headers path
+TARGET_SPECIFIC_HEADER_PATH += kernel/sony/msm8x60/include
 
 # Kernel information
 BOARD_KERNEL_BASE        := 0x80200000
@@ -34,6 +37,11 @@ BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_BOOTIMG := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom androidboot.selinux=permissive user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
+
+# Kernel properties
+TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
+TARGET_KERNEL_CONFIG := cm_viskan_huashan_defconfig
+PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/shinano/kernel-headers
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -76,10 +84,6 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 BOARD_VENDOR_PLATFORM := viskan
 TARGET_NO_RECOVERY := false
 TARGET_NO_KERNEL := false
-
-# Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
-TARGET_KERNEL_CONFIG := cm_viskan_huashan_defconfig
 
 # Display HAL
 USE_OPENGL_RENDERER := true
