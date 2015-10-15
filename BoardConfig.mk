@@ -27,9 +27,6 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_SEPARATE_RECOVERY := true
 
-# Kernel headers path
-TARGET_SPECIFIC_HEADER_PATH += kernel/sony/msm8x60/include
-
 # Kernel information
 BOARD_KERNEL_BASE        := 0x80200000
 BOARD_KERNEL_PAGESIZE    := 2048
@@ -41,7 +38,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
 TARGET_KERNEL_CONFIG := cm_viskan_huashan_defconfig
-PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/shinano/kernel-headers
+TARGET_SPECIFIC_HEADER_PATH += kernel/sony/msm8x60/include
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
