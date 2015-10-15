@@ -8,7 +8,7 @@ LOCAL_SHARED_LIBRARIES := \
     libhardware liblog libutils libcutils
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_MODULE := lights.msm8960
+LOCAL_MODULE := lights.huashan
 
 LOCAL_MODULE_TAGS := optional
 
