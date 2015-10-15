@@ -25,18 +25,16 @@
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Common Sony Resources
 $(call inherit-product, device/sony/common/resources.mk)
 
-# Inherit from huashan device makefile
-$(call inherit-product, device/sony/huashan/huashan.mk)
-
-# Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := huashan
 PRODUCT_DEVICE := huashan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia SP
+
+$(call inherit-product, device/sony/huashan/device.mk)
