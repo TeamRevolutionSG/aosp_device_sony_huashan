@@ -246,7 +246,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8960
+    lights.huashan
 
 # Power
 PRODUCT_PACKAGES += \
