@@ -38,7 +38,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8x60
 TARGET_KERNEL_CONFIG := cm_viskan_huashan_defconfig
-common_includes += $(TARGET_KERNEL_SOURCE)/include
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
