@@ -1,4 +1,4 @@
-ifeq ($(filter-out huashan,$(TARGET_DEVICE)),)
+ifneq ($(filter-out huashan,$(TARGET_DEVICE)),)
 
     LOCAL_PATH := $(call my-dir)
 
