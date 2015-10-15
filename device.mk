@@ -1,4 +1,5 @@
-# Copyright (C) 2015 The CyanogenMod Project
+#
+# Copyright (C) 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,12 +12,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# This file includes all definitions that apply to ALL hammerhead devices, and
+# are also specific to hammerhead devices
+#
+# Everything in this directory will become public
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/huashan/overlay
 
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_COPY_FILES := \
+    $(LOCAL_KERNEL):kernel
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -103,6 +109,9 @@ PRODUCT_COPY_FILES += \
 # SEC Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/sec_config:system/etc/sec_config
+
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # HW Settings
 PRODUCT_COPY_FILES += \
