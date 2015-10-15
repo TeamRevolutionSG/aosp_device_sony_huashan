@@ -17,10 +17,11 @@
 # are also specific to hammerhead devices
 #
 
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+# Will care about kernel later on
+#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 
-PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES := \
+#    $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/huashan/overlay
