@@ -11,7 +11,8 @@
 
 
 [ BUILD ]
+
+cd AOSP;
 source ./build/envsetup.sh;
 croot;
-lunch aosp_huashan-userdebug;
-make -j8;
+repo sync device/sony/huashan/; lunch aosp_huashan-userdebug; lunch aosp_huashan-userdebug; make -j8;
