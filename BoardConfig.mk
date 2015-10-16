@@ -16,7 +16,6 @@
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
-PRODUCT_VENDOR_KERNEL_HEADERS += kernel/sony/msm8x60/include
 
 # Board
 BOARD_VENDOR := sony
