@@ -14,6 +14,9 @@
 # limitations under the License.
 # 
 
+# Includes
+TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
+
 # Board
 BOARD_VENDOR := sony
 BOARD_RECOVERY_SWIPE := true
