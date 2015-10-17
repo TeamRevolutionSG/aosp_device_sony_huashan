@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com/" />
+  <remote name="github" fetch="https://github.com/" review="review.cyanogenmod.org" />
   <remote name="sony" fetch="git://github.com/sonyxperiadev/" />
-  <project name="thermanager" revision="master" path="vendor/sony/system/thermanager" groups="device" remote="sony" />
+  <remove-project name="platform/build" />
+  <project name="AdrianDC/android_build" path="build" remote="github" revision="android-6.0.0_r1" />
   <project name="AdrianDC/android_hardware_sony_DASH" path="hardware/sony/DASH" remote="github" revision="android-6.0.0_r1" />
   <project name="AdrianDC/aosp_device_sony_huashan" path="device/sony/huashan" remote="github" revision="android-6.0.0_r1" />
   <project name="AdrianDC/android_kernel_sony_msm8x60" path="kernel/sony/msm8x60" remote="github" revision="android-6.0.0_r1" />
