@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_KERNEL := device/sony/huashan/kernel
-
-PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel
-
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/huashan/overlay
 
