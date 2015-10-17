@@ -11,4 +11,4 @@ git fetch http://review.cyanogenmod.org/CyanogenMod/android_hardware_qcom_media 
 git cherry-pick FETCH_HEAD;
 
 # Fallback
-cd $CurrentDir;
+cd $CurrentDir/;
