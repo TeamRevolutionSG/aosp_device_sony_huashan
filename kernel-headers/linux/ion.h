@@ -27,6 +27,9 @@
 #endif
 
 struct ion_handle;
+#ifndef __KERNEL__
+typedef struct ion_handle *ion_user_handle_t;
+#endif
 /**
  * enum ion_heap_types - list of all possible types of heaps
  * @ION_HEAP_TYPE_SYSTEM:	 memory allocated via vmalloc
@@ -515,9 +518,14 @@ static inline int msm_ion_do_cache_op(struct ion_client *client,
 struct ion_allocation_data {
 	size_t len;
 	size_t align;
-	unsigned int heap_mask;
 	unsigned int flags;
+#ifdef __KERNEL__
+	unsigned int heap_mask;
 	struct ion_handle *handle;
+#else
+	unsigned int heap_id_mask;
+	ion_user_handle_t handle;
+#endif
 };
 
 /**
@@ -531,7 +539,11 @@ struct ion_allocation_data {
  * provides the file descriptor and the kernel returns the handle.
  */
 struct ion_fd_data {
+#ifdef __KERNEL__
 	struct ion_handle *handle;
+#else
+	ion_user_handle_t handle;
+#endif
 	int fd;
 };
 
@@ -540,7 +552,11 @@ struct ion_fd_data {
  * @handle:	a handle
  */
 struct ion_handle_data {
+#ifdef __KERNEL__
 	struct ion_handle *handle;
+#else
+	ion_user_handle_t handle;
+#endif
 };
 
 /**
