@@ -34,7 +34,10 @@ PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia SP
 
+LOCAL_KERNEL := device/sony/huashan/kernel
+PRODUCT_COPY_FILES := \
+    $(LOCAL_KERNEL):kernel
+
 TARGET_PREBUILT_KERNEL ?= kernel
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/$(TARGET_PREBUILT_KERNEL):kernel
 
 $(call inherit-product, device/sony/huashan/device.mk)
