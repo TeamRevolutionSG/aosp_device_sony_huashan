@@ -15,7 +15,3 @@ Storage | 8GB
 Battery | 2370 mAh
 Display | 4.6" 1280 x 720 px
 Camera  | 8MPx, LED Flash
-
-This branch is for building AOSP 6.0
-
-Still experimental
