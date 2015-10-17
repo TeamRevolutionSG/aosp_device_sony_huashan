@@ -440,6 +440,7 @@ int main(int argc, char** argv) {
 	int index;
 
 	umask(0);
+	printf("Bloody works or not ?\n");
 
 	if (argc < 5) {
 		print_usage();
