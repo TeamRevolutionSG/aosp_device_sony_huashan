@@ -15,3 +15,8 @@ Storage | 8GB
 Battery | 2370 mAh
 Display | 4.6" 1280 x 720 px
 Camera  | 8MPx, LED Flash
+
+Errors you may encounter have been documented in the /documentation folder
+- Total documented Errors = 2
+
+Errors can be patched by using the patch script available at /patches folder. Remember to "chmod a+x patch.sh" first!
