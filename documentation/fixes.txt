@@ -17,3 +17,18 @@ make: *** Waiting for unfinished jobs....
 
 
 [*] Error 2:
+
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2173:17: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+     entropy_cfg.longentropysel = VEN_ENTROPY_MODEL_CABAC;
+                 ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2193:17: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+     entropy_cfg.longentropysel = VEN_ENTROPY_MODEL_CAVLC;
+                 ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2207:11: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+   entropy.longentropysel = entropy_cfg.longentropysel;
+           ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2207:40: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+   entropy.longentropysel = entropy_cfg.longentropysel;
+                                        ^
+
+> CherryPick: http://review.cyanogenmod.org/#/c/112267/
