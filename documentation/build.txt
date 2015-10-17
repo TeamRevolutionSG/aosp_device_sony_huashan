@@ -1,19 +1,27 @@
+===[ MANIFEST ]===
+
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github" fetch="https://github.com/" review="review.cyanogenmod.org" />
   <remote name="sony" fetch="git://github.com/sonyxperiadev/" />
   <remove-project name="platform/build" />
-  <project name="AdrianDC/android_build" path="build" remote="github" revision="android-6.0.0_r1" />
-  <project name="AdrianDC/android_hardware_sony_DASH" path="hardware/sony/DASH" remote="github" revision="android-6.0.0_r1" />
-  <project name="AdrianDC/aosp_device_sony_huashan" path="device/sony/huashan" remote="github" revision="android-6.0.0_r1" />
-  <project name="AdrianDC/android_kernel_sony_msm8x60" path="kernel/sony/msm8x60" remote="github" revision="android-6.0.0_r1" />
-  <project name="AdrianDC/proprietary_vendor_sony" path="vendor/sony" remote="github" revision="android-6.0.0_r1" />
+  <project path="build"name="AdrianDC/android_build" remote="github" revision="android-6.0.0_r1" />
+  <project path="external/busybox" name="CyanogenMod/android_external_busybox" />
+  <project path="device/sony/huashan" name="AdrianDC/aosp_device_sony_huashan" remote="github" revision="android-6.0.0_r1" />
+  <project path="hardware/sony/DASH" name="AdrianDC/android_hardware_sony_DASH" remote="github" revision="android-6.0.0_r1" />
+  <project path="kernel/sony/msm8x60" name="AdrianDC/android_kernel_sony_msm8x60"remote="github" revision="android-6.0.0_r1" />
+  <project path="vendor/sony" name="AdrianDC/proprietary_vendor_sony" remote="github" revision="android-6.0.0_r1" />
 </manifest>
 
 
-[ BUILD ]
+===[ BUILD ]===
 
 cd AOSP;
 source ./build/envsetup.sh;
 croot;
-repo sync device/sony/huashan/; lunch aosp_huashan-userdebug; lunch aosp_huashan-userdebug; make -j8;
+repo sync ./build/ --force-sync --force-broken;
+repo sync ./external/busybox/ --force-sync --force-broken;
+
+repo sync ./device/sony/huashan/ --force-sync --force-broken;
+lunch aosp_huashan-userdebug;
+make -j8;
