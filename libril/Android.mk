@@ -23,7 +23,7 @@ ifeq ($(SIM_COUNT), 2)
     LOCAL_CFLAGS += -DANDROID_SIM_COUNT_2
 endif
 
-LOCAL_MODULE:= libril
+LOCAL_MODULE:= libril.huashan
 
 include $(BUILD_SHARED_LIBRARY)
 

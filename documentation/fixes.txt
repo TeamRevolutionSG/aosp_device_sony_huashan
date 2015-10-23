@@ -1,0 +1,34 @@
+[*] Error 1:
+
+hardware/qcom/display/msm8960/libcopybit/copybit_c2d.cpp:1390:55: error: narrowing conversion of 'dst->copybit_image_t::w' from 'const uint32_t {aka const unsigned int}' to 'int' inside { } [-Werror=narrowing]
+     struct copybit_rect_t dr = { 0, 0, dst->w, dst->h };
+                                                       ^
+hardware/qcom/display/msm8960/libcopybit/copybit_c2d.cpp:1390:55: error: narrowing conversion of 'dst->copybit_image_t::h' from 'const uint32_t {aka const unsigned int}' to 'int' inside { } [-Werror=narrowing]
+hardware/qcom/display/msm8960/libcopybit/copybit_c2d.cpp:1391:55: error: narrowing conversion of 'src->copybit_image_t::w' from 'const uint32_t {aka const unsigned int}' to 'int' inside { } [-Werror=narrowing]
+     struct copybit_rect_t sr = { 0, 0, src->w, src->h };
+                                                       ^
+hardware/qcom/display/msm8960/libcopybit/copybit_c2d.cpp:1391:55: error: narrowing conversion of 'src->copybit_image_t::h' from 'const uint32_t {aka const unsigned int}' to 'int' inside { } [-Werror=narrowing]
+cc1plus: all warnings being treated as errors
+make: *** [out/target/product/huashan/obj/SHARED_LIBRARIES/copybit.msm8960_intermediates/copybit_c2d.o] Error 1
+make: *** Waiting for unfinished jobs....
+
+
+> CherryPick: http://review.cyanogenmod.org/#/c/112315/
+
+
+[*] Error 2:
+
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2173:17: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+     entropy_cfg.longentropysel = VEN_ENTROPY_MODEL_CABAC;
+                 ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2193:17: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+     entropy_cfg.longentropysel = VEN_ENTROPY_MODEL_CAVLC;
+                 ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2207:11: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+   entropy.longentropysel = entropy_cfg.longentropysel;
+           ^
+hardware/qcom/media/mm-video-legacy/vidc/venc/src/video_encoder_device.cpp:2207:40: error: 'struct venc_entropycfg' has no member named 'longentropysel'
+   entropy.longentropysel = entropy_cfg.longentropysel;
+                                        ^
+
+> CherryPick: http://review.cyanogenmod.org/#/c/112267/
